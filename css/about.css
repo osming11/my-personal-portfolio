@@ -1,0 +1,152 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode (default) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .about-section {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .about-section h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .about-text p {
+    color: #ccc;
+}
+
+body.dark-mode .cta-btn {
+    background-color: #00bfff;
+    color: #000;
+}
+
+body.dark-mode .cta-btn:hover {
+    background-color: #0099cc;
+}
+
+body.dark-mode .about-img {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+    transition: background 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background: #555;
+}
+.back-home-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #0056b3;
+  }  
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #111;
+    color: #666;
+  }    

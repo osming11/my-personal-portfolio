@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode (default) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .contact-section {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .contact-section h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-form {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .form-group label {
+    color: #ddd;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 1px solid #666;
+}
+
+body.dark-mode input:focus, body.dark-mode textarea:focus {
+    border-color: #0056b3;
+}
+
+body.dark-mode .submit-btn {
+    background-color: #ff4500;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+    transition: background 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background: #555;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .submit-btn {
+        padding: 10px 15px;
+    }
+}
+.back-home-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #0056b3;
+  }  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #111;
+    color: #666;
+  } 

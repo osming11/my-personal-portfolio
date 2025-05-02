@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="css/achieve.css">
+</head>
+<body>
+    <section id="achievements" class="achievements-section">
+        <div class="achievements-container">
+            <h2>My Achievements</h2>
+            <div class="achievements-content">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Senior High Graduate</h3>
+                        <p>It is a stepping stone to achieve my dreams.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Being Healthy</h3>
+                        <p>Im always greatfull for the good health.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Making my self proud</h3>
+                        <p>I am proud of what I become.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome for Icons (optional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Dark Mode Toggle Button -->
+    <button onclick="toggleDarkMode()" class="dark-mode-toggle">🌙 Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <a href = "index.html"><button onclick="scrollToHome()" class="back-home-btn">🏠 Home</button></a>
+
+    <script>
+        function scrollToHome() {
+          document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+        }
+      </script>
+    <footer>
+        <p>&copy; 2025 EdmunMorisJr. All rights reserved.</p>
+      </footer>
+</body>
+</html>

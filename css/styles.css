@@ -1,0 +1,435 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #2c2c2c;
+    padding: 15px 30px;
+    border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #f0f0f0;
+    padding: 6px 12px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #00bcd4;
+    color: #000;
+    border-radius: 4px;
+  }
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00bcd4;
+    margin-bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  /* Make sure image and text layout works well */
+  .about-card {
+    text-align: center;
+  }
+  
+  /* Sections */
+  section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  h3 {
+    color: #ffffff;
+  }
+  
+  /* Cards */
+  .card {
+    background: #2c2c2c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Projects Grid */
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .project-grid .card {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 250px;
+  }
+  
+  /* Back to Top */
+  .back-home-btn {
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+    background-color: #37474f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    max-width: 200px;
+  }
+  
+  .back-home-btn:hover {
+    background-color: #263238;
+  }
+  
+  /* Dark Mode Button */
+  .dark-toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #eaeaea;
+  }
+  
+  body.dark-mode .card,
+  body.dark-mode .navbar {
+    background-color: #1a1a1a;
+    border-color: #444;
+  }
+  
+  body.dark-mode .nav-links li a:hover {
+    background-color: #00bcd4;
+    color: #000;
+  }
+  
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode p,
+  body.dark-mode a {
+    color: #ffffff !important;
+  }
+  
+  .glitch {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  .glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    animation: glitchTop 2s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 blue;
+    animation: glitchBottom 1.5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitchTop {
+    0% {
+      clip-path: inset(0 0 85% 0);
+    }
+    10% {
+      clip-path: inset(10% 0 75% 0);
+    }
+    20% {
+      clip-path: inset(15% 0 60% 0);
+    }
+    30% {
+      clip-path: inset(30% 0 45% 0);
+    }
+    40% {
+      clip-path: inset(50% 0 30% 0);
+    }
+    50% {
+      clip-path: inset(60% 0 20% 0);
+    }
+    60% {
+      clip-path: inset(70% 0 15% 0);
+    }
+    70% {
+      clip-path: inset(80% 0 5% 0);
+    }
+    100% {
+      clip-path: inset(85% 0 0 0);
+    }
+  }
+  
+  @keyframes glitchBottom {
+    0% {
+      clip-path: inset(85% 0 0 0);
+    }
+    10% {
+      clip-path: inset(75% 0 10% 0);
+    }
+    20% {
+      clip-path: inset(60% 0 15% 0);
+    }
+    30% {
+      clip-path: inset(45% 0 30% 0);
+    }
+    40% {
+      clip-path: inset(30% 0 50% 0);
+    }
+    50% {
+      clip-path: inset(20% 0 60% 0);
+    }
+    60% {
+      clip-path: inset(15% 0 70% 0);
+    }
+    70% {
+      clip-path: inset(5% 0 80% 0);
+    }
+    100% {
+      clip-path: inset(0 0 85% 0);
+    }
+  }
+  .bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .bubble {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 153, 255, 0.3);
+    border-radius: 50%;
+    animation: float 10s infinite;
+    opacity: 0.6;
+  }
+  
+  /* Position bubbles randomly */
+  .bubble:nth-child(1) { top: 90%; left: 10%; animation-name: floatUp; }
+  .bubble:nth-child(2) { top: 50%; left: 20%; animation-name: floatRight; }
+  .bubble:nth-child(3) { top: 70%; left: 30%; animation-name: floatDown; }
+  .bubble:nth-child(4) { top: 60%; left: 40%; animation-name: floatLeft; }
+  .bubble:nth-child(5) { top: 80%; left: 50%; animation-name: floatUp; }
+  .bubble:nth-child(6) { top: 40%; left: 60%; animation-name: floatRight; }
+  .bubble:nth-child(7) { top: 20%; left: 70%; animation-name: floatDown; }
+  .bubble:nth-child(8) { top: 90%; left: 80%; animation-name: floatLeft; }
+  .bubble:nth-child(9) { top: 85%; left: 25%; animation-name: floatUp; }
+  .bubble:nth-child(10) { top: 75%; left: 90%; animation-name: floatRight; }
+  
+  @keyframes floatUp {
+    0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+    100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+  }
+  
+  @keyframes floatDown {
+    0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+    100% { transform: translateY(120vh) scale(1.4); opacity: 0; }
+  }
+  
+  @keyframes floatRight {
+    0%   { transform: translateX(0) scale(1); opacity: 0.6; }
+    100% { transform: translateX(100vw) scale(1.2); opacity: 0; }
+  }
+  
+  @keyframes floatLeft {
+    0%   { transform: translateX(0) scale(1); opacity: 0.6; }
+    100% { transform: translateX(-100vw) scale(1.2); opacity: 0; }
+  }
+  
+  body.dark-mode .bubble {
+    background: rgba(0, 153, 255, 0.5);
+  }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #111;
+    color: #666;
+  } 
+/* Light Mode (Default) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #1e1e1e;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .card {
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .nav-links li a {
+    color: #1e1e1e;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  
+  .logo {
+    color: #00bcd4;
+  }
+  
+  /* Profile Picture */
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00bcd4;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Dark Mode Toggle Button */
+  .dark-toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  🌙 Dark Mode Overrides
+  css
+  Copy
+  Edit
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #333;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #444;
+  }
+  
+  body.dark-mode .nav-links li a {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .nav-links li a:hover {
+    background-color: #00bcd4;
+    color: #000;
+  }
+  
+  body.dark-mode .logo,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode p,
+  body.dark-mode a {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .profile-pic {
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.6);
+  }
